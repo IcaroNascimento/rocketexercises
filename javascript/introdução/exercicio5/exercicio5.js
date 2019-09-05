@@ -1,9 +1,10 @@
 function userSkills(usuarios) {
 	let result = ''
-	for (const iterator of usuarios) {
-		result.push(`O ${usuarios[iterator].nome} possui as habilidades: \n${usuarios[iterator].habilidades}`)	
-	}
-	 return result
+	for (let index = 0; index < usuarios.length; index++) {	
+		skills = usuarios[index].habilidades.join(', ')
+		result += (`O ${usuarios[index].nome} possui as habilidades: \n${skills}\n`)	
+	} 
+	return result
 	
 }
 
